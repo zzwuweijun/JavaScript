@@ -1,0 +1,35 @@
+/*#box{*/
+/*font-size: 20px;*/
+/*color:red;*/
+/*background: #fde;*/
+/*}*/
+/*#pox{*/
+/*font-size: 30px;*/
+/*color:blue;*/
+/*background: orange;*/
+/*}*/
+/*.aaa{*/
+/*font-size: 30px;*/
+/*color:blue;*/
+/*background: orange;*/
+/*}*/
+/*.bbb{*/
+/*font-size: 50px;*/
+/*color:red;*/
+/*background: #fde;*/
+/*}*/
+
+
+/*/////////////// */
+#box3 {
+    font-size: 20px;
+    color: red;
+    background: #fde;
+}
+#pox{
+    color:green;
+    border:1px solid black;
+}
+.bbb{
+    font-weight:bold;
+}
