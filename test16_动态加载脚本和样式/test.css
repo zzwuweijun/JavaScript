@@ -1,0 +1,10 @@
+#box1 {
+    font-size: 20px;
+    color: red;
+    background: #fde;
+    width: 300px;
+    height: 300px;
+    position:absolute;
+    top: 50px;
+    left:50px;
+}
