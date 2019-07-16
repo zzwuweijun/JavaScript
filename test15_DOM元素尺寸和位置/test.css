@@ -1,0 +1,44 @@
+#box {
+    font-size: 20px;
+    color: red;
+    background: #fde;
+    width: 300px;
+    height: 300px;
+    border:20px solid black;
+    margin: 50px;
+}
+#box1 {
+    font-size: 20px;
+    color: red;
+    background: #fde;
+    width: 300px;
+    height: 300px;
+    padding:10px;
+    overflow: scroll;
+}
+#box2 {
+    font-size: 20px;
+    color: red;
+    background: #fde;
+    width: 300px;
+    height: 300px;
+}
+#box3 {
+    font-size: 20px;
+    color: red;
+    background: #fde;
+    width: 300px;
+    height: 300px;
+    padding:50px;
+    overflow: scroll;
+    margin: 100px;
+}
+#box4 {
+    font-size: 20px;
+    color: red;
+    background: #fde;
+    width: 300px;
+    height: 300px;
+    overflow: scroll;
+    margin: 100px;
+}
