@@ -81,7 +81,8 @@
 // 鼠标点击得到对应的DOM元素对象
 // document.onclick = function (ev) {
 //     var e = ev || window.event;
-//     console.log(e.target);
+//     console.log(e.target);       // w3c
+//     console.log(window.event.srcElement);       // IE
 // }
 
 // 事件流（看图）
