@@ -123,6 +123,14 @@
 // }, false);
 
 // 阻止默认行为（看图）
+// function preDef(evt){
+//     var e = evt || window.event;
+//     if(e.preventDefault){
+//         e.preventDefault();
+//     }else{
+//         e.returnValue = false;
+//     }
+// }
 
 // 自定义右键菜单
 // function preDef(evt){
