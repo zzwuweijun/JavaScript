@@ -1,0 +1,30 @@
+
+#box {
+    color: red;
+    width: 400px;
+    height: 200px;
+    position: absolute;
+    top: 50px;
+    left: 60px;
+}
+
+.orange {
+    background-color: orange;
+}
+
+.blue {
+    background-color: blue;
+}
+
+#pox {
+    background-color: cornflowerblue;
+    width: 600px;
+    height: 300px;
+}
+#menu{
+    width:100px;
+    background-color: orange;
+    position: absolute;
+    display: none;
+}
+
