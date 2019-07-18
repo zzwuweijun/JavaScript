@@ -1,0 +1,24 @@
+
+#box {
+    color: red;
+    width: 400px;
+    height: 200px;
+    position: absolute;
+    top: 50px;
+    left: 60px;
+}
+
+/*#submit{*/
+    /*background-color: red;*/
+    /*background-image: url("11.PNG");*/
+    /*width:200px;*/
+    /*height:200px;*/
+    /*border-radius: 50%;*/
+    /*font-size: 60px;*/
+    /*font-weight: bolder;*/
+    /*outline: none;*/
+/*}*/
+/*#button{*/
+    /*background-color: aqua;*/
+    /*border:0px saddlebrown none;*/
+/*}*/
