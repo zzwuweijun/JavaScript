@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<books>
+     <book>
+      <age id="age1">23</age>
+      <email>25@qq.com</email>
+      <name>Javascript</name>
+     </book>
+     <book>
+      <age id="age2">56</age>
+      <email>50@qq.com</email>
+      <name>Ajax</name>
+     </book>
+     <book>
+      <age id="age3">89</age>
+      <email>75@qq.com</email>
+      <name>这是一句中文</name>
+     </book>
+</books>
