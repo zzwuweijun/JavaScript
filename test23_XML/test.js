@@ -148,7 +148,49 @@ function createXMLDOM() {
 
 
 
+
 // ----------------------------------------跨浏览器处理XML
-// 结合上面的过程
+// 查看 CC.js文件，有详细的跨浏览器处理XML方式
 
+//typeof window.DOMParser和 typeof window.ActiveXObject不管是在IE的任意
+// 版本或是在其他的浏览器，都是显示一样的值，所以无法判断。
+// 要进行浏览器的兼容，使用cc.js的方式
+function getXMLDOM(xmlStr) {
+    var xmlDom = null;
+    if(typeof window.DOMParser != "undefined"){
+        xmlDom = (new DOMParser).parseFromString(xmlStr, "text/xml");
+        var errors = xmlDom.getElementsByTagName("parsererror");
+        if(errors.length > 0){
+            throw new Error("错误信息："+ errors[0].textContent);
+        }
+    }else if(typeof window.ActiveXObject != "undefined"){
+        var version = [
+            "MSXML2.DOMDocument6.0",
+            "MSXML2.DOMDocument3.0",
+            "MSXML2.DOMDocument"
+        ];
+        for (var i = 0; i < version.length; i++) {
+            try {
+                var xmlDom = new ActiveXObject(version[i]);
+            } catch (e) {
+                //    跳过
+            }
+        }
+        xmlDom.loadXML(xmlStr);
+        if(xmlStr.parseError != 0){
+            throw new Error("错误信息："+ xmlStr.parseError.reason);
+        }
+        return xmlDom;
+    }else{
+        throw new Error("你的浏览器或系统不支持XML DOM对象！！！");
+    }
+    return xmlDom;
+}
 
+var xmlStr = "<root>\n" +
+    "    <user>Lee</user>\n" +
+    "    <email>123456789@qq.com</email>\n" +
+    "    <url>http://www.baidu.com</url>\n" +
+    "</root>";
+// var xmlDom = getXMLDOM(xmlStr);
+// alert(xmlDom);
