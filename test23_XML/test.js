@@ -187,6 +187,18 @@ function getXMLDOM(xmlStr) {
     return xmlDom;
 }
 
+// 序列化XML
+function serializerXML(xmlDom){
+    var xml = "";
+
+    if(typeof window.XMLSerializer != "undefined"){
+        xml = (new XMLSerializer()).serializeToString(xmlDom);
+    }else if(typeof xmlDom.xml != "undefined"){
+        xml = xmlDom.xml;
+    }
+    return xml;
+}
+
 var xmlStr = "<root>\n" +
     "    <user>Lee</user>\n" +
     "    <email>123456789@qq.com</email>\n" +
