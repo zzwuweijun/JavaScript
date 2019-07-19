@@ -1,0 +1,12 @@
+#box {
+	font-size:20px;
+	color:red;
+	background:#ccc;
+}
+#pox {
+	color:green;
+	border:1px solid black;
+}
+.bbb {
+	font-weight:bold;
+}
