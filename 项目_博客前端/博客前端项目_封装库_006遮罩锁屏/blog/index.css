@@ -1,0 +1,200 @@
+/*
+---------------------------------header start--------
+*/
+/*---------------------------------logo和个人中心------------------------*/
+body{
+    margin:0;
+    padding:0;
+    background:#fff url("images/header_bg.png") repeat-x;
+    color:#333;
+}
+ul{
+    padding: 0;
+    margin:0;
+}
+ul li{
+    /*list-style：列名前的符号*/
+    list-style: none;
+}
+#header{
+    width:900px;
+    height:30px;
+    margin:0 auto;
+}
+#header .logo{
+    display:block;
+}
+#header .member{
+    width:100px;
+    height:30px;
+    line-height:30px;
+    float:right;
+    /*no-repeat:不重复；可以在后面再跟两个参数，分别表示X轴和Y轴*/
+    background:url("images/arrow.png") no-repeat 70px center;
+    /*cursor：鼠标的变化；pointer：*/
+    cursor:pointer;
+    position: relative;
+}
+#header ul{
+    position:absolute;
+    top: 30px;
+    /*left:0px;*/
+    background: #FBF7E1;
+    width:80px;
+    height:100px;
+    border:1px solid #999999;
+    border-top: none;
+    padding:10px 0 0 0;
+    display:none;
+}
+#header ul li{
+    height:25px;
+    /**line-height:表示行高*/
+    line-height:25px;
+    /*text-indent：属性规定文本块中首行文本的缩进*/
+    text-indent: 25px;
+    /*letter-spacing:属性增加或减少字符间的空白（字符间距）。*/
+    letter-spacing: 3px;
+}
+#header ul li a{
+    display: block;
+    text-decoration: none;
+    color:#333;
+    background: url("images/arrow3.gif") no-repeat 10px 45%;
+}
+#header ul li a:hover{
+    background:#fc0 url("images/arrow4.gif") no-repeat 10px 45%;
+}
+/*---------------------------------遮罩锁屏------------------------*/
+#screen{
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:9998;
+    background: #000;
+    /*透明度*/
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);    /*IE*/
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);    /*IE*/
+    opacity: 0.3;       /*w3c*/
+    /*display: none;*/
+    
+}
+
+
+/*---------------------------------登录------------------------*/
+/*登录框的头部 start*/
+#header .login{
+    float: right;
+    width:35px;
+    height:30px;
+    line-height:30px;
+    cursor: pointer;
+    position: relative;
+    right: 10px;
+}
+#login{
+    width:350px;
+    height:250px;
+    border:1px solid #ccc;
+    display:none;
+    position: absolute;
+    z-index:9999;
+    background:#ffffff;
+}
+#login h2{
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 14px;
+    letter-spacing:1px;
+    color:#666;
+    background: url("images/login_header.png") repeat-x;
+    margin: 0;
+    padding:0;
+    border-bottom: 1px solid #cccccc;
+    margin: 0 0 10px 0;
+}
+#login h2 img{
+    float: right;
+    position:relative;
+    top:9px;
+    right:8px;
+    width:20px;
+    height:20px;
+}
+/*登录框的头部 end*/
+/*登录框 start*/
+#login div.user,#login div.pass{
+    font-size: 14px;
+    color:#666;
+    padding:5px 0;
+    /*line-height:40px;*/
+    text-align:center;
+    letter-spacing:2px;
+}
+#login input.text{
+    width:200px;
+    height:25px;
+    border:1px solid #cccccc;
+    background:#fff;
+    font-size:14px;
+}
+#login .button{
+    text-align:center;
+    padding:20px 0;
+}
+#login input.submit{
+    width:107px;
+    height:30px;
+    background:url("images/login_button.png") no-repeat;
+    border:none;
+    cursor:pointer;
+}
+/*登录框 end*/
+
+/*注册新用户|忘记密码？ start*/
+#login .other{
+    text-align:right;
+    padding:10px 10px;
+    color:#6666;
+}
+
+/*注册新用户|忘记密码？ end*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

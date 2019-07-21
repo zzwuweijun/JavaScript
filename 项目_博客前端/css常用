@@ -1,0 +1,151 @@
+position：
+    说明：定位属性，是CSS中非常重要的属性。有绝对定位(absolute)、相对定位(relative)、静态(static)、固定(fixed)。
+        元素可以通过 "left"、"top"、"right" 以及 "bottom" 属性来规定坐标。
+    用法：
+    1.绝对定位（常用）：position=absolute
+        说明：absolute是相对于父标签来进行定位的，如果没有父标签或者父标签是static，刚烈的absolute会相对于文档定位。
+            绝对定位的元素的位置相对于最近的已定位父元素，如果元素没有已定位的父元素，那么它的位置相对于<html>:
+        用法：position=absolute；top=px/%/em;left=px/%/em;
+
+    2.相对定位（常用）:position=relative
+        说明：是相对于自己文档的位置来定位的，对旁边的元素没有影响。
+        用法：position=relative；top=px/%/em;left=px/%/em;
+
+    3.固定定位（常用）：position=fixed       fixed：固定的; 不变的; 不能变的; 不易改变的; 执著的; 呆板的;
+        说明：位置被设置为 fixed 的元素，可定位于相对于浏览器窗口的指定坐标
+        用法：position=fixed；top=px/%/em;left=px/%/em;
+
+    4.静态定位：position：static
+        说明：它始终会处于页面流给予的位置（static 元素会忽略任何 top、bottom、left 或 right 声明）。
+
+    5.继承定位：position：inherit
+        说明：	position 属性的值从父元素继承。
+
+x-index：
+    说明：层次堆叠
+
+list-style:
+    说明：列表（List）属性。在一个声明中设置所有的列表属性。该属性是设置<ul>这类标签的列表的次序或符号的属性。
+        通俗点讲，就是设置列表前面的空（实）心圆、表示次序的数字等等，可以设置默认的类型，定位，图片。
+        有三个属性：list-style-type, list-style-position, list-style-image；
+        默认值为：disc outside none
+        详细资料：https://www.runoob.com/cssref/pr-list-style.html
+
+background:
+    说明：有设置背景颜色、图片、图片定位、图片尺寸大小、图片重复（铺排）、滚动或固定、裁剪、参考原点。
+        详细资料：https://www.runoob.com/cssref/css3-pr-background.html
+
+line-height：
+    说明：给对象设置行高。该对象里面的文本将以设置的行高为准进行排版。
+
+text-indent：
+    说明：规定文本块中首行文本的缩进
+
+letter-spacing：
+    说明：字母之间的间距
+word-spacing:
+    说明：单词之间的间距
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

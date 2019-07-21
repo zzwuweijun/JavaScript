@@ -1,0 +1,106 @@
+body{
+    margin:0;
+    padding:0;
+    background: url("images/header_bg.png") repeat-x;
+    color:#333;
+}
+ul{
+    padding: 0;
+    margin:0;
+}
+ul li{
+    /*list-style：列名前的符号*/
+    list-style: none;
+}
+#header{
+    width:900px;
+    height:30px;
+    margin:0 auto;
+}
+#header .logo{
+    display:block;
+}
+#header .member{
+    width:100px;
+    height:30px;
+    line-height:30px;
+    float:right;
+    /*no-repeat:不重复；可以在后面再跟两个参数，分别表示X轴和Y轴*/
+    background:url("images/arrow.png") no-repeat 70px center;
+    /*cursor：鼠标的变化；pointer：*/
+    cursor:pointer;
+}
+#header ul{
+    position:relative;
+    /*top: 30px;*/
+    /*left:800px;*/
+    background: #FBF7E1;
+    width:100px;
+    height:100px;
+    border:1px solid #999999;
+    border-top: none;
+    padding:10px 0 0 0;
+    display:none;
+}
+#header ul li{
+    height:25px;
+    /**line-height:表示行高*/
+    line-height:25px;
+    /*text-indent：属性规定文本块中首行文本的缩进*/
+    text-indent: 25px;
+    /*letter-spacing:属性增加或减少字符间的空白（字符间距）。*/
+    letter-spacing: 3px;
+}
+#header ul li a{
+    display: block;
+    text-decoration: none;
+    color:#333;
+    background: url("images/arrow3.gif") no-repeat 10px 45%;
+}
+#header ul li a:hover{
+    background:#fc0 url("images/arrow4.gif") no-repeat 10px 45%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
