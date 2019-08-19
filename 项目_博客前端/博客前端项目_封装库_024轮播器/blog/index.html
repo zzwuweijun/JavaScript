@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>博客前端项目_001理解javascript库</title>
+    <link rel="stylesheet" type="text/css" href="index.css"/>
+    <script type="text/javascript" src="../tool.js"></script>
+    <script type="text/javascript" src="../base.js"></script>
+    <script type="text/javascript" src="../base_drag.js"></script>
+    <script type="text/javascript" src="../base_animate.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+</head>
+<body>
+<!----------------------------- 个人中心 ---------------------------->
+<div id="header">
+    <div class="logo">
+        <img src="images/logo.gif" alt="">
+        <div class="member">个人中心
+            <ul class="member_ul">
+                <li><a href="#">设置</a></li>
+                <li><a href="#">换肤</a></li>
+                <li><a href="#">帮助</a></li>
+                <li><a href="#">退出</a></li>
+            </ul>
+        </div>
+        <div class="reg">注册</div>
+        <div class="login">登录</div>
+    </div>
+</div>
+
+<!----------------------------- 网站注册 ---------------------------->
+<div id="reg">
+    <h2><img src="images/close.png" alt="" class="close">网站登录</h2>
+    <form name="reg" action="###">
+        <dl>
+            <dd>用&ensp;户&ensp;名：&emsp;<input type="text" name="user" class="text" value=""/>
+                <span class="info info_user">请输入用户名，2~10位，由字母、数字和下划线组成！</span>
+                <span class="error error_user">输入不合法，请重新输入！</span>
+                <span class="succ succ_user">可用</span>
+            </dd>
+            <dd>密&ensp;&ensp;&ensp;&ensp;码：&emsp;<input type="text" name="pass" class="text"/>
+                <span class="info info_pass">
+                    <p>安全级别：<strong class="s s1">■</strong><strong class="s s2">■</strong><strong
+                            class="s s3">■</strong> <strong class="s s4" style="font-weight:normal;"></strong></p>
+                    <p><strong class="q1" style="font-weight:normal;font-size: 20px;">○</strong> 6-20 个字符</p>
+                    <p><strong class="q2" style="font-weight:normal;font-size: 20px;">○</strong> 只能包含大小写字母、数字和非空格字符</p>
+                    <p><strong class="q3" style="font-weight:normal;font-size: 20px;">○</strong> 大、小写字母、数字、非空字符，2种以上</p>
+                </span>
+                <span class="error error_pass">输入不合法，请重新输入！</span>
+                <span class="succ succ_pass">可用</span>
+            </dd>
+            <dd>密码确认：&emsp;<input type="password" name="notpass" class="text"/>
+                <span class="info info_notpass">请再一次输入密码！</span>
+                <span class="error error_notpass">密码不一致，请重新输入！</span>
+                <span class="succ succ_notpass">可用</span>
+            </dd>
+            <dd>提&emsp;&emsp;问：&emsp;<select name="ques">
+                <option value="0">------请选择------</option>
+                <option value="1">---你最喜欢吃的菜</option>
+                <option value="2">---你最喜欢的宠物名字</option>
+                <option value="3">---你的出生地</option>
+                <option value="4">---你最喜欢的明星</option>
+            </select>
+                <span class="error error_ques">尚未选择提问，请选择！</span>
+            </dd>
+            <dd>回&emsp;&emsp;答：&emsp;<input type="text" name="ans" class="text"/>
+                <span class="info info_ans">请输入回答，2~32位！</span>
+                <span class="error error_ans">回答不合法，请重新输入！</span>
+                <span class="succ succ_ans">可用</span>
+            </dd>
+            <dd>电子邮件：&emsp;<input type="text" name="email" class="text" autocomplete="off"/>
+                <!--autocomplete: 系统的默认提示功能-->
+                <span class="info info_email">请输入电子邮件！</span>
+                <span class="error error_email">邮件不合法，请重新输入！</span>
+                <span class="succ succ_email">可用</span>
+                <ul class="all_email">
+                    <li><span></span>@qq.com</li>
+                    <li><span></span>@163.com</li>
+                    <li><span></span>@sohu.com</li>
+                    <li><span></span>@sina.com.cn</li>
+                    <li><span></span>@gmail.com</li>
+                </ul>
+            </dd>
+            <dd class="birthday">生&emsp;&emsp;日：&emsp;
+                <select name="year">
+                    <option value="0">-&nbsp;&nbsp;年&nbsp;&nbsp;-</option>
+                </select> -
+                <select name="month">
+                    <option value="0">-&nbsp;&nbsp;月&nbsp;&nbsp;-</option>
+                </select> -
+                <select name="day">
+                    <option value="0">-&nbsp;&nbsp;日&nbsp;&nbsp;-</option>
+                </select>
+                <span class="error error_birthday">尚未全部选择，请选择！</span>
+            </dd>
+            <dd style="height: 105px;"><span style="vertical-align:85px;">备&emsp;&emsp;注：</span>&emsp;<textarea
+                    name="ps"></textarea></dd>
+            <dd style="display:block;" class="ps">还可以输入<strong class="num">5</strong>字</dd>
+            <dd style="display:none;" class="ps">已超过<strong class="num"></strong>字，<span class="clear">清尾</span></dd>
+            <dd style="padding: 0 0 0 80px;"><input type="submit" name="sub" class="submit" value=""/></dd>
+        </dl>
+    </form>
+</div>
+
+<!----------------------------- 网站登录 ---------------------------->
+<div id="login">
+    <h2><img src="images/close.png" alt="" class="close">网站登录</h2>
+    <div class="user">帐号:<input type="text" name="user" class="text"></div>
+    <div class="pass">帐号:<input type="password" name="pass" class="text"></div>
+    <div class="button"><input type="button" class="submit"></div>
+    <div class="other">注册新用户|忘记密码？</div>
+</div>
+
+<!----------------------------- 滑动导航 ---------------------------->
+<div id="nav">
+    <ul class="about">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <ul class="black">
+        <li>首页</li>
+        <li>博文列表</li>
+        <li>精彩相册</li>
+        <li>动感音乐</li>
+        <li>关于我</li>
+    </ul>
+    <div class="nav_bg">
+        <ul class="white">
+            <li>首页</li>
+            <li>博文列表</li>
+            <li>精彩相册</li>
+            <li>动感音乐</li>
+            <li>关于我</li>
+        </ul>
+    </div>
+</div>
+
+<!----------------------------- 菜单切换 ---------------------------->
+<div id="main">
+    <div id="sidebar">
+        <h2>教育博文1</h2>
+        <ul>
+            <li><a href="###">靠自己95 后女生国外名校录取</a></li>
+            <li><a href="###">00 后的成长烦恼成隐形杀手</a></li>
+            <li><a href="###">一年自学MIT 学习方法</a></li>
+            <li><a href="###">申请赴美读研 年来首遇冷</a></li>
+            <li><a href="###">西政“萌招聘被赞</a></li>
+        </ul>
+        <h2>教育博文2</h2>
+        <ul>
+            <li><a href="###">靠自己95 后女生被1校录取</a></li>
+            <li><a href="###">00 后的成长烦恼：压杀手</a></li>
+            <li><a href="###">一年自学MIT 的33狂学习方法</a></li>
+            <li><a href="###">申请赴美读研降5首遇冷</a></li>
+            <li><a href="###">西政“萌招聘辣椒</a></li>
+        </ul>
+        <h2>教育博文3</h2>
+        <ul>
+            <li><a href="###">靠自己95 后女生校录取</a></li>
+            <li><a href="###">00 后的成长烦恼杀手</a></li>
+            <li><a href="###">一年自学MIT 的狂学习方法</a></li>
+            <li><a href="###">申请赴美人数下首遇冷</a></li>
+            <li><a href="###">西政“萌”秀出</a></li>
+        </ul>
+    </div>
+    <div id="index">
+        index
+    </div>
+    <div id="banner">
+        <img src="images/banner1.jpg" alt="轮播器第一张" />
+        <img src="images/banner2.jpg" alt="轮播器第二张" />
+        <img src="images/banner3.jpg" alt="轮播器第三张" />
+        <ul>
+            <li>●</li>
+            <li>●</li>
+            <li>●</li>
+        </ul>
+        <span></span>
+        <strong></strong>
+    </div>
+    <div style="">211</div><br/>
+    <div style="">211</div><br/>
+    <div style="">211</div><br/>
+    <div style="">211</div><br/>
+    <div style="">211</div><br/>
+    <div style="">211</div><br/>
+    <div style="">211</div><br/>
+    <div style="">211</div><br/>
+    <div style="">211</div><br/>
+    <div style="">211</div><br/>
+    <div style="">211</div><br/>
+</div>
+
+
+
+<!----------------------------- 百度分享侧栏 ---------------------------->
+<div id="share">
+    <h2>分享到</h2>
+    <ul>
+        <li><a href="###" class="a">一键分享</a></li>
+        <li><a href="###" class="b">新浪微博</a></li>
+        <li><a href="###" class="c">人人网</a></li>
+        <li><a href="###" class="d">百度相册</a></li>
+        <li><a href="###" class="e">腾讯朋友</a></li>
+        <li><a href="###" class="f">豆瓣网</a></li>
+        <li><a href="###" class="g">百度新首页</a></li>
+        <li><a href="###" class="h">和讯微博</a></li>
+        <li><a href="###" class="i">QQ 空间</a></li>
+        <li><a href="###" class="j">百度搜藏</a></li>
+        <li><a href="###" class="k">腾讯微博</a></li>
+        <li><a href="###" class="l">开心网</a></li>
+        <li><a href="###" class="m">百度贴吧</a></li>
+        <li><a href="###" class="n">搜狐微博</a></li>
+        <li><a href="###" class="o">QQ 好友</a></li>
+        <li><a href="###" class="p">更多...</a></li>
+    </ul>
+    <div class="share_footer"><a href="###">百度分享</a><span></span></div>
+</div>
+
+
+
+<!----------------------------- 锁屏遮罩 ---------------------------->
+<div id="screen"></div>
+
+
+<!----------------------------- 测试 ---------------------------->
+<!--<div id="test" style="background-color: #cccccc;width:300px;height:300px;">123</div>-->
+
+</body>
+</html>
