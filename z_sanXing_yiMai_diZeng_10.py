@@ -264,6 +264,8 @@ class sanXing2():
             return uu["name"], self._shangzhi1, 0, uu["qian"], uu["cishu"]
 
     def jisuan2(self):
+        ff = [0]
+        ff[0] = self._shangzhi1[0]
         for uu in self.mubiao:
             if sanXing2.DangQianZhi[1] in self._shangzhi1 or sanXing2.DangQianZhi[2] in self._shangzhi1 or \
                     sanXing2.DangQianZhi[3] in self._shangzhi1:
@@ -334,6 +336,10 @@ class sanXing2():
                         # print("1111")
                         sanXing2.returnList[i] = self.return2(uu)
                         break
+                    
+            self._shangzhi1[0] = ff[0]
+
+        self.setShangZhi(1)
 
 ####################################################    运行
 # 保存当前期的日期
@@ -342,35 +348,35 @@ data_date = [-1]
 ttt = sanXing2([
     {
         "name": "a-1",
-        "qian": [15.4],
+        #"qian": [15.4],
         # "xiaya": [],
         "suozhi": [5],
         "beishu": 0.1
     },
     {
         "name": "a-2",
-        "qian": [27.6],
+        #"qian": [27.6],
         "xiaya": [0, 1, 3, 8, 0, 0],
         "suozhi": [4],
         "beishu": 0.1
     },
     {
         "name": "a-3",
-        "qian": [14],
+        #"qian": [14],
         "xiaya": [0, 1, 2, 3, 4, 0],
         # "suozhi": [5],
         "beishu": 0.1
     },
     {
         "name": "a-4",
-        "qian": [11],
+        #"qian": [11],
         "xiaya": [1, 2, 3, 5, 8, 0],
         # "suozhi": [5],
         "beishu": 0.1
     },
     {
         "name": "a-5",
-        "qian": [4.9],
+        #"qian": [4.9],
         "xiaya": [0, 1, 2, 3, 5, 8],
         "suozhi": [6],
         "beishu": 0.1
@@ -480,26 +486,23 @@ def main():
 
                 ttt.jisuan2()
 
-                time.sleep(1)
-
                 fff.setChuXianZhi(10, 5)
 
                 fff.jisuan2()
 
-                time.sleep(1)
-
                 ddd.setChuXianZhi(10, 7)
 
                 ddd.jisuan2()
-
+                
                 bj = sanXing2.returnList[0]
                 # print("----", z_y.sanXing2.returnList)
                 if len(sanXing2.returnList) > 1:
                     for i in range(0, len(sanXing2.returnList) - 1):
                         if bj[3][0] < sanXing2.returnList[i + 1][3][0]:
                             bj = sanXing2.returnList[i + 1]
+                    
 
-                print("bj----", bj)
+                print("bj----","名称",  bj[0], "新范围",  bj[1], "下压", bj[2], "qian",  bj[3], "连续次数",  bj[4])
                 if gengXinShuJu[1] in shangzhi1[0] or gengXinShuJu[2] in shangzhi1[0] or gengXinShuJu[3] in \
                         shangzhi1[0]:
                     qian[0] += 5 * xiaya[0] * beishu
