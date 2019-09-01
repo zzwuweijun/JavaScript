@@ -65,6 +65,7 @@ def lushuget_danGeShuJu_200(zhi):
     # print(zhi)
     return list_
 
+
 ######################### 输入列表，并确定区域，排列得到从打到小的值
 def sort(qq, zhi, geshu=5):
     shuJu = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
@@ -102,6 +103,7 @@ def sort(qq, zhi, geshu=5):
         shuJu[shuJu.index(uu[i])] = 999
     # print(ret)
     return ret
+
 
 ####################################  前三星---一码---计算前三个区出现过最多的码  ##################
 def qianSan_1(zhi, geshu=5):
@@ -148,6 +150,7 @@ def qianSan_1(zhi, geshu=5):
     print("jjj1-jjj3:", ret)
     return ret
 
+
 ####################################  爬取1个数据  ##################
 def lushuget_danGeShuJu_1():
     """
@@ -192,7 +195,7 @@ class sanXing2():
         #     "cishu_zong": [0],
         #     "beishu": 0.01
 
-        self.mubiao = zhi    # 是字典，保存着所有要的值，例如名称，钱，等等，和__init__（）里的差不多：例如下面的例子
+        self.mubiao = zhi  # 是字典，保存着所有要的值，例如名称，钱，等等，和__init__（）里的差不多：例如下面的例子
 
         sanXing2.geshu[0] += len(self.mubiao)
 
@@ -320,8 +323,8 @@ class sanXing2():
             tt = sanXing2.DangQianZhi[1], sanXing2.DangQianZhi[2], sanXing2.DangQianZhi[3]
 
             print("qian:", ("%.4f" % uu["qian"][0]), "--zdq:", ("%.4f" % uu["zdqian"][0]), "--zgq:",
-                  ("%.4f" % uu["zxqian"][0]), "--", uu["name"], "--/出错次数:",
-                  uu["cishu_zong"][0], "--/", "-连续次数：", uu["cishu"][0], "--/旧范围：",
+                  ("%.4f" % uu["zxqian"][0]), "--/出错次数:", uu["cishu_zong"][0], "--", uu["name"], "--/", "-连续次数：",
+                  uu["cishu"][0], "--/旧范围：",
                   self._shangzhi1, "--/出现值：", tt, "--/期数：", sanXing2.DangQianZhi[0])
 
             self.setShangZhi(1)
@@ -336,10 +339,11 @@ class sanXing2():
                         # print("1111")
                         sanXing2.returnList[i] = self.return2(uu)
                         break
-                    
+
             self._shangzhi1[0] = ff[0]
 
         self.setShangZhi(1)
+
 
 ####################################################    运行
 # 保存当前期的日期
@@ -348,35 +352,35 @@ data_date = [-1]
 ttt = sanXing2([
     {
         "name": "a-1",
-        #"qian": [15.4],
-        # "xiaya": [],
-        "suozhi": [5],
+        # "qian": [15.4],
+        "xiaya": [0, 0, 1, 1, 2, 4, 8, 16, ],
+        "suozhi": [8],
         "beishu": 0.1
     },
     {
         "name": "a-2",
-        #"qian": [27.6],
+        # "qian": [27.6],
         "xiaya": [0, 1, 3, 8, 0, 0],
         "suozhi": [4],
         "beishu": 0.1
     },
     {
         "name": "a-3",
-        #"qian": [14],
-        "xiaya": [0, 1, 2, 3, 4, 0],
-        # "suozhi": [5],
+        # "qian": [14],
+        "xiaya": [0, 1, 4],
+        "suozhi": [3],
         "beishu": 0.1
     },
     {
         "name": "a-4",
-        #"qian": [11],
+        # "qian": [11],
         "xiaya": [1, 2, 3, 5, 8, 0],
         # "suozhi": [5],
         "beishu": 0.1
     },
     {
         "name": "a-5",
-        #"qian": [4.9],
+        # "qian": [4.9],
         "xiaya": [0, 1, 2, 3, 5, 8],
         "suozhi": [6],
         "beishu": 0.1
@@ -388,8 +392,8 @@ fff = sanXing2([
     {
         "name": "b-1",
         # "qian": [15.4],
-        # "xiaya": [],
-        "suozhi": [5],
+        "xiaya": [0, 0, 1, 1, 2, 4, 8, 16, ],
+        "suozhi": [8],
         "beishu": 0.1
     },
     {
@@ -402,8 +406,8 @@ fff = sanXing2([
     {
         "name": "b-3",
         # "qian": [14],
-        "xiaya": [0, 1, 2, 3, 4, 0],
-        # "suozhi": [5],
+        "xiaya": [0, 1, 4],
+        "suozhi": [3],
         "beishu": 0.1
     },
     {
@@ -427,8 +431,8 @@ ddd = sanXing2([
     {
         "name": "c-1",
         # "qian": [15.4],
-        # "xiaya": [],
-        "suozhi": [5],
+        "xiaya": [0, 0, 1, 1, 2, 4, 8, 16, ],
+        "suozhi": [8],
         "beishu": 0.1
     },
     {
@@ -441,8 +445,8 @@ ddd = sanXing2([
     {
         "name": "c-3",
         # "qian": [14],
-        "xiaya": [0, 1, 2, 3, 4, 0],
-        # "suozhi": [5],
+        "xiaya": [0, 1, 4],
+        "suozhi": [3],
         "beishu": 0.1
     },
     {
@@ -464,9 +468,12 @@ ddd = sanXing2([
 
 ss = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]
 qian = [10]
+zdq = [0]
+zxq = [100]
 shangzhi1 = [[0]]
 beishu = 0.1
 xiaya = [0]
+
 
 def main():
     try:
@@ -493,22 +500,29 @@ def main():
                 ddd.setChuXianZhi(10, 7)
 
                 ddd.jisuan2()
-                
+
                 bj = sanXing2.returnList[0]
                 # print("----", z_y.sanXing2.returnList)
                 if len(sanXing2.returnList) > 1:
                     for i in range(0, len(sanXing2.returnList) - 1):
                         if bj[3][0] < sanXing2.returnList[i + 1][3][0]:
                             bj = sanXing2.returnList[i + 1]
-                    
 
-                print("bj----","名称",  bj[0], "新范围",  bj[1], "下压", bj[2], "qian",  bj[3], "连续次数",  bj[4])
+                print("bj----", "名称", bj[0], "新范围", bj[1], "下压", bj[2], "qian", bj[3], "连续次数", bj[4])
                 if gengXinShuJu[1] in shangzhi1[0] or gengXinShuJu[2] in shangzhi1[0] or gengXinShuJu[3] in \
                         shangzhi1[0]:
                     qian[0] += 5 * xiaya[0] * beishu
                 else:
                     qian[0] -= 2 * xiaya[0] * beishu
-                print("qian:", qian, "连续次数:", bj[4], "下压:", xiaya[0], "旧范围：", shangzhi1[0], "新范围：", bj[1])
+
+                if qian[0] > zdq[0]:
+                    zdq[0] = qian[0]
+
+                if qian[0] < zxq[0]:
+                    zxq[0] = qian[0]
+
+                print("qian:", qian, "zdq", zdq, "zxq", zxq, "连续次数:", bj[4], "下压:", xiaya[0], "旧范围：", shangzhi1[0],
+                      "新范围：", bj[1])
 
                 shangzhi1[0] = bj[1]
                 xiaya[0] = bj[2]
